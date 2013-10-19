@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Evaluación 3 de Lab de IPI</title>
+	<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+	<section id='formularioClientes'>
+		<form id='ingCliente' action="" method='post'>
+			<p>Nombre: <input type="text" name='nombre'></p>
+			<p>Departamento: 
+				<select name="departamento" id="departamento">
+					<option value="Ahuachapán">Ahuachapán</option>
+					<option value="Cabañas">Cabañas</option>
+					<option value="Chalatenango">Chalatenango</option>
+					<option value="Cuscatlán">Cuscatlán</option>
+					<option value="La Libertad">La Libertad</option>
+					<option value="La Paz">La Paz</option>
+					<option value="La Unión">La Unión</option>
+					<option value="Morazán">Morazán</option>
+					<option value="San Miguel">San Miguel</option>
+					<option value="Santa Ana">Santa Ana</option>
+					<option value="San Salvador">San Salvador</option>
+					<option value="San Vicente">San Vicente</option>
+					<option value="Sonsonate">Sonsonate</option>
+					<option value="Usulután">Usulután</option>
+				</select>
+			</p>
+			<p>Sexo:
+				<select name='sexo' id='sexo'>
+					<option value="M">Masculino</option>
+					<option value="F">Femenino</option>
+				</select>
+			<p>Edad: <input type="text" name='edad'></p>
+			<p>Efectivo: <input type="text" name='efectivo'></p>
+			<button>Enviar</button>
+		</form>
+	</section>
+	<section id='mostrarClientes'>
+		
+	</section>
+	<section id='acciones'>
+		<p>ID Cliente: <input type="text" id='idCl'></p>
+		<button id='saludar'>Saludar</button>
+		<button id='vdatos'>Ver Datos Cliente</button>
+	</section>
+	<script src='ajax.js'></script>
+</body>
+</html>

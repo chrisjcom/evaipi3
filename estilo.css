@@ -1,0 +1,33 @@
+body
+{
+	background: #abcdef;
+	margin: 0 auto;
+	padding-top: 1%;
+	width: 80%;
+}
+
+#ingCliente
+{
+	margin: 0 auto;
+	text-align: center;
+	width: 90%;
+}
+
+#acciones
+{
+	background: #eeeeee;
+	margin: 0 auto;
+	margin-top: 5%;
+	padding: 1%;
+	text-align: center;
+	width:50%;
+}
+
+#formularioClientes, #mostrarClientes
+{
+	background: #eeeeee;
+	display: inline-block;
+	padding: 1%;
+	vertical-align: top;
+	width: 45%;
+}
