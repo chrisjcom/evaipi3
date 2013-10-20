@@ -30,7 +30,7 @@ $server->register('agregarCliente',array('nombre'=>'xsd:string','departamento'=>
 function agregarCliente($nombre, $depto, $sexo, $edad, $efectivo)
 {
 	$conexion = new conexion("localhost","clientes","root", "");
-	$query="insert into clientes(nombre, departamento, sexo, edad, efectivo) values('".$nombre."','".$depto."','".$sexo."',".$edad.",".$efectivo.")";
+	$query="insert into clientes(nombre, departamento, sexo, edad, efectivo) values('".$nombre."','".$depto."','".$sexo."',".intval($edad).",".intval($efectivo).")";
 	$result = $conexion->CUD($query);
 	if ($result)
 	{
