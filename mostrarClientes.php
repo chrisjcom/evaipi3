@@ -6,7 +6,7 @@
 	echo 'ID, Nombre, Edad <br>';
 	while($fila=mysqli_fetch_array($resultado))
 	{
-		echo $fila[0].','.$fila[1].','.$fila[2].'<br>';
+		echo $fila[0].', '.$fila[1].', '.$fila[2].'<br>';
 	}
 	$conexion->cerrarConexion();
 ?>

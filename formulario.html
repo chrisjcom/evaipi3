@@ -7,7 +7,7 @@
 </head>
 <body>
 	<section id='formularioClientes'>
-		<div id='ingCliente'>
+		<form method='post' action='agregarClientes.php' id='ingCliente'>
 			<p>Nombre: <input type="text" name='nombre' id='nombre'></p>
 			<p>Departamento: 
 				<select name="departamento" id="departamento">
@@ -34,8 +34,8 @@
 				</select>
 			<p>Edad: <input type="text" name='edad' id='edad'></p>
 			<p>Efectivo: <input type="text" name='efectivo' id='efectivo'></p>
-			<button id='registrar'>Enviar</button>
-		</div>
+			<button>Enviar</button>
+		</form>
 	</section>
 	<section id='mostrarClientes'>
 		
@@ -43,7 +43,6 @@
 	<section id='acciones'>
 		<p>ID Cliente: <input type="text" id='idCl'></p>
 		<button id='saludar'>Saludar</button>
-		<button id='vdatos'>Ver Datos Cliente</button>
 	</section>
 	<script src='ajax.js'></script>
 </body>

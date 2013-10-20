@@ -38,25 +38,6 @@ function saludar()
 	ajax.send(null)
 }
 
-function registrar()
-{
-	nombre = document.getElementById('nombre').value;
-	depto = document.getElementById('departamento').value;
-	sexo = document.getElementById('sexo').value;
-	edad = document.getElementById('edad').value;
-	efectivo = document.getElementById('efectivo').value;
-	ajax=nuevoAjax();
-	ajax.open("GET","agregarClientes.php?nombre="+nombre+"&depto="+depto+"&sexo="+sexo+"&edad="+edad+"&efectivo="+efectivo,true);
-	ajax.onreadystatechange = function()
-	{
-		if (ajax.readyState = 4)
-		{
-			document.getElementById('mostrarClientes').innerHTML = ajax.responseText
-		}
-	}
-	ajax.send(null)
-}
-
 //Carga de Contenidos
 function cargarContenido()
 {
@@ -74,15 +55,11 @@ function cargarContenido()
 	contenedor.style.textAlign='center'; 
 }
 
-document.getElementById('registrar').onclick =function() 
-{
-	registrar();
-}  
-
 document.getElementById('saludar').onclick = function()
 {
 	saludar();
 }
+
 window.onload = function()
 {
 	cargarContenido();
