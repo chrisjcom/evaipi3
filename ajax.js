@@ -27,21 +27,20 @@ function saludar()
 {
 	var id = document.getElementById('idCl').value;
 	ajax=nuevoAjax();
-	ajax.open("GET","agregarusuario.php?nombre="+id,true);
+	ajax.open("GET","saludar.php?iCl="+id,true);
 	ajax.onreadystatechange = function()
 	{
 		if (ajax.readyState = 4)
 		{
-			contenedor.innerHTML = ajax.responseText
+			alert(ajax.responseText);
 		}
 	}
 	ajax.send(null)
-	contenedor.style.textAlign='center'; 
 }
 
 //Carga de Contenidos
 function cargarContenido()
-{	
+{
 	var contenedor = document.getElementById('mostrarClientes');
 	ajax=nuevoAjax();
 	ajax.open("GET","mostrarClientes.php",true);
@@ -56,9 +55,9 @@ function cargarContenido()
 	contenedor.style.textAlign='center'; 
 }
 
-registrar.onclick = function()
+document.getElementById('saludar').onclick = function()
 {
-	regUser();
+	saludar();
 }
 
 window.onload = function()

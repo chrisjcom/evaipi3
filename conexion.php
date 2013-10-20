@@ -27,7 +27,7 @@ class conexion {
         if ($consulta = mysqli_query($this->objconexion(), $query) == TRUE){
             return true;
         }  else {
-            return pg_errormessage($this->objconexion());
+            return false;
         }   
     }
     
