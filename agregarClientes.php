@@ -1,10 +1,10 @@
 <?php
 	error_reporting(E_ALL ^ E_NOTICE);
-	$nombre = $_POST['nombre'];
-	$depto = utf8_decode($_POST['departamento']);
-	$sexo = $_POST['sexo'];
-	$edad = $_POST['edad'];
-	$efectivo = $_POST['efectivo'];
+	$nombre = $_GET['nombre'];
+	$depto = utf8_decode($_GET['departamento']);
+	$sexo = $_GET['sexo'];
+	$edad = $_GET['edad'];
+	$efectivo = $_GET['efectivo'];
 
 
 	include ('nusoap.php');
@@ -35,8 +35,11 @@
 		else
 		{
 			print_r($result);
+			echo '<br>';
 		}
 	}
+	include('mostrarClientes.php');
+
 	// try
 	// {
 	// 	$client = new soapClient('http://localhost/evaipi3/ws/ws.php?wsdl');
