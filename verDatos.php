@@ -11,7 +11,7 @@
 	}
 
 	$param = array('idCl'=>$idCl);
-	$result = $client->call('saludar',$param);
+	$result = $client->call('mostrarDatos',$param);
 
 	if($client->fault)
 	{
