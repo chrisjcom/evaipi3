@@ -44,6 +44,28 @@ function agregarCliente($nombre, $depto, $sexo, $edad, $efectivo)
 	}
 }
 
+//tercer método
+$server->register('mostrarDatos',array('idCl'=>'xsd:int'), array('return'=>'xsd:string'), $URL);
+
+function mostrarDatos($idCl)
+{
+	$conexion = new conexion("localhost","clientes","root", "");
+	$query="select * from clientes where idCliente=".$idCl."";
+	$result = $conexion->Extraer($query);
+	$datos = '***************--***************<br>';
+	while($fila=mysqli_fetch_array($result))
+	{
+		$datos = $datos.'ID Cliente: '.$fila[0].'<br>';
+		$datos = $datos.'Nombre: '.$fila[1].'<br>';
+		$datos = $datos.'Departamento: '.$fila[2].'<br>';
+		$datos = $datos.'Sexo: '.$fila[3].'<br>';
+		$datos = $datos.'Edad: '.$fila[4].'<br>';
+		$datos = $datos.'Efectivo: '.$fila[5].'<br>';
+		$datos = $datos.'***************--***************';
+	}
+	return $datos;
+}
+
 if ( !isset( $HTTP_RAW_POST_DATA ) ) $HTTP_RAW_POST_DATA =file_get_contents( 'php://input' );
 $server->service($HTTP_RAW_POST_DATA);
 ?>

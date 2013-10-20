@@ -27,15 +27,16 @@ function saludar()
 {
 	var id = document.getElementById('idCl').value;
 	ajax=nuevoAjax();
-	ajax.open("GET","saludar.php?iCl="+id,true);
+	ajax.open("GET","saludar.php?idClient="+id,true);
 	ajax.onreadystatechange = function()
 	{
 		if (ajax.readyState = 4)
 		{
-			alert(ajax.responseText);
+			document.getElementById('datosCliente').innerHTML = ajax.responseText
 		}
 	}
 	ajax.send(null)
+	document.getElementById('datosCliente').style.textAlign = 'center';
 }
 
 function registrar()
@@ -57,6 +58,22 @@ function registrar()
 	ajax.send(null)
 }
 
+function verDatos()
+{
+	var id = document.getElementById('idCl').value;
+	ajax=nuevoAjax();
+	ajax.open("GET","verDatos.php?idClient="+id,true);
+	ajax.onreadystatechange = function()
+	{
+		if (ajax.readyState = 4)
+		{
+			document.getElementById('datosCliente').innerHTML = ajax.responseText
+		}
+	}
+	ajax.send(null)
+	document.getElementById('datosCliente').style.textAlign = 'center';
+}
+
 //Carga de Contenidos
 function cargarContenido()
 {
@@ -72,6 +89,11 @@ function cargarContenido()
 	}
 	ajax.send(null)
 	contenedor.style.textAlign='center'; 
+}
+
+document.getElementById('vDatos').onclick = function()
+{
+	verDatos();
 }
 
 document.getElementById('registrar').onclick =function() 
