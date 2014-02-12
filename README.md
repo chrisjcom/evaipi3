@@ -1,4 +1,4 @@
-evaipi3
-=======
+AJAX y Web Services
+=====================
 
-Evaluación de AJAX en IPI(Introducción a la Programación en Internet)
+Evaluación de AJAX y Web Services con PHP en IPI(Introducción a la Programación en Internet)
